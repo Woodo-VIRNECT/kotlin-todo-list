@@ -10,5 +10,14 @@ package com.example.todo.database
  * DATE            AUTHOR             NOTE
  * -----------------------------------------------------------
  * 2023/03/13      dnejdzlr2          최초 생성
- */class TodoDataBase {
+ */
+data class TodoDataBase(
+    var index: Int = 0,
+    var todoList: MutableList<Todo> = mutableListOf()
+) {
+    fun init() {
+        this.index = 0
+        this.todoList = mutableListOf()
+        println("[DEBUG] todo database init")
+    }
 }

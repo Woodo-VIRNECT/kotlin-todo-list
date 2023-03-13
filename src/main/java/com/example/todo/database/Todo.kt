@@ -1,5 +1,7 @@
 package com.example.todo.database
 
+import java.time.LocalDateTime
+
 /**
  * Project        : todo
  * DATE           : 2023/03/13
@@ -10,5 +12,12 @@ package com.example.todo.database
  * DATE            AUTHOR             NOTE
  * -----------------------------------------------------------
  * 2023/03/13      dnejdzlr2          최초 생성
- */class Todo {
-}
+ */
+data class Todo(
+    var index: Int? = null,
+    var title: String? = null,
+    var description: String? = null,
+    var schedule: LocalDateTime? = null,
+    var createdAt: LocalDateTime? = null,
+    var updatedAt: LocalDateTime? = null,
+)
